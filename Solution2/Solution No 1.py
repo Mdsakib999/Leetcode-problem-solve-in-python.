@@ -1,10 +1,12 @@
+
+
+
 def printParenthesis(str, n):
     if(n > 0):
-        _printParenthesis(str, 0,
-                          n, 0, 0)
+        _printParenthesis(str, 0, n, 0, 0)
     return
-def _printParenthesis(str, pos, n,
-                      open, close):
+
+def _printParenthesis(str, pos, n, open, close):
  
     if(close == n):
         for i in str:
@@ -14,15 +16,14 @@ def _printParenthesis(str, pos, n,
     else:
         if(open < n):
             str[pos] = '('
-            _printParenthesis(str, pos + 1, n,
-                              open + 1, close)
+            _printParenthesis(str, pos + 1, n, open + 1, close)
         if(open > close):
             str[pos] = ')'
-            _printParenthesis(str, pos + 1, n,
-                              open, close + 1)
+            _printParenthesis(str, pos + 1, n, open, close + 1)
         
         
-# Driver Code
+
+        
 n = 3
 str = [""] * 2 * n
 n = int(input("Enter the number:"))
